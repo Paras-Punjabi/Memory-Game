@@ -5,6 +5,7 @@ let time = document.querySelector(".time");
 let count = 0;
 let moveCount = 0;
 let matchCount = 0;
+let audio = new Audio('clapping.mp3')
 let cardsArray = [
   "⚽",
   "🍕",
@@ -191,7 +192,7 @@ let cardsDiv = document.querySelectorAll(".card");
 // result at last when all the cards are face up
 function getResult() {
   clearInterval(timer);
-
+  audio.play();
   startingDiv.innerHTML = `<h1>GameOver!</h1>
                                     <br>
                                     <span>Time Taken : ${time.innerHTML}</span>
@@ -212,6 +213,9 @@ function getResult() {
     gameContainer.innerHTML = "";
     startingDiv.style.display = "block";
   }, 500);
+  setTimeout(()=>{
+    audio.pause();
+  },4000)
 }
 
 // alternative way of starting the game
