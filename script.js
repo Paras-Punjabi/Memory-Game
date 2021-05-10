@@ -85,6 +85,7 @@ function generateCards(arr) {
     // main logic----------------
 
     cardElm.addEventListener("click", (e) => {
+      if(cardElm.classList.contains('back')){
       moveCount++;
       moves.innerText = moveCount;
       e.target.innerText = item;
@@ -110,7 +111,7 @@ function generateCards(arr) {
               html.classList.add("back");
               html.innerText = "";
               html.style.background = "";
-            }, 500);
+            }, 800);
           });
         } else {
           htmlArray.forEach((html) => {
@@ -122,6 +123,7 @@ function generateCards(arr) {
           });
         }
       }
+    }
     });
   });
 }

@@ -57,6 +57,7 @@ h1 {
   font-size: 50px;
   transition: transform 100ms ease-in;
   cursor: pointer;
+  user-select: none;
 }
 
 .back {
@@ -126,6 +127,10 @@ button:hover {
 button,
 i,
 .card {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input[type="radio"]{
   -webkit-tap-highlight-color: transparent;
 }
 
