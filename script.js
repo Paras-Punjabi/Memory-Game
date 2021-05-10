@@ -110,7 +110,7 @@ function generateCards(arr) {
               html.classList.add("back");
               html.innerText = "";
               html.style.background = "";
-            }, 900);
+            }, 500);
           });
         } else {
           htmlArray.forEach((html) => {
